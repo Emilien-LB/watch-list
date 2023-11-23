@@ -1,0 +1,15 @@
+<h1><%= @list.name %></h1>
+
+<%= link_to 'Add a movie', new_list_bookmark_path(@list), class:"btn btn-success" %>
+<%= link_to "back to lists", lists_path, class:"btn btn-dark mt-1" %>
+
+<ul>
+  <% @list.movies.each do |movie| %>
+    <li>
+      <strong><%= movie.title %></strong><br>
+      Overview: <%= movie.overview %><br>
+      Rating: <%= movie.rating %><br>
+      <%= image_tag(movie.poster_url, alt: movie.title, class: "movie-poster") %>
+    </li>
+  <% end %>
+</ul>

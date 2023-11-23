@@ -8,6 +8,7 @@
         <div class="card-body">
           <%= link_to"", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn-close" %>
           <h5 class="card-title"><%= list.name %></h5>
+          <p><%= link_to "more", list, class:"btn btn-info" %></p>
         </div>
       </div>
     </div>
