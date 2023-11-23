@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    <h2>New list</h2>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <%= simple_form_for @list do |l| %>
+      <%= l.input :name %>
+      <%= l.button :submit, class:"btn btn-success"%>
+      <%= link_to "back to lists", lists_path, class:"btn btn-dark mt-1" %>
+    <% end %>
+  </div>
+</div>

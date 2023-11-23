@@ -1,0 +1,14 @@
+<h1>All your lists</h1>
+<%= link_to "create a movie list", new_list_path, class:"btn btn-success m-2"%>
+
+
+<% @lists.each do |list|  %>
+    <div class="col m-2">
+      <div class="card">
+        <div class="card-body">
+          <%= link_to"", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn-close" %>
+          <h5 class="card-title"><%= list.name %></h5>
+        </div>
+      </div>
+    </div>
+<% end %>
